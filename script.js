@@ -38,3 +38,53 @@ document.querySelector('.btn[href="#about"]').addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+// Contact
+
+const form = document.querySelector(".contact-form");
+const email = document.querySelector(".contact-email");
+const message = document.querySelector(".contact-textarea");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    // MESSAGE CHECK
+    if (message.value.trim() === "") {
+        message.classList.add("contact-error");
+        isValid = false;
+    } else {
+        message.classList.remove("contact-error");
+        message.classList.add("contact-success");
+    }
+
+    // EMAIL CHECK (@gmail.com)
+    if (!email.value.endsWith("@gmail.com")) {
+        email.classList.add("contact-error");
+        isValid = false;
+    } else {
+        email.classList.remove("contact-error");
+        email.classList.add("contact-success");
+    }
+
+    // SUCCESS
+    if (isValid) {
+        alert("Message yuborildi ✅");
+        form.reset();
+    }
+});
+
+// LIVE VALIDATION
+email.addEventListener("input", () => {
+    if (email.value.endsWith("@gmail.com")) {
+        email.classList.remove("contact-error");
+    }
+});
+
+message.addEventListener("input", () => {
+    if (message.value.trim() !== "") {
+        message.classList.remove("contact-error");
+    }
+});
