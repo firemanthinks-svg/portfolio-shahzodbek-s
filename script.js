@@ -88,3 +88,13 @@ message.addEventListener("input", () => {
         message.classList.remove("contact-error");
     }
 });
+
+function changeLang(lang) {
+    if (lang === "uz") {
+        window.location.href = "./index.html";
+    } else if (lang === "ru") {
+        window.location.href = "./russ.html";
+    } else if (lang === "en") {
+        window.location.href = "./english.html";
+    }
+}
