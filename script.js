@@ -1,3 +1,4 @@
+// Typed.js animatsiya
 let typed = new Typed('.text', {
     strings: ["Frontend Developer", "UI/UX Designer", "Figma Specialist", "QA Tester"],
     typeSpeed: 100,
@@ -6,12 +7,12 @@ let typed = new Typed('.text', {
     loop: true
 });
 
+// Light/Dark mode toggle
 let btn = document.getElementById("mode");
 let icon = btn.querySelector("i");
 
 btn.onclick = () => {
     document.body.classList.toggle("light");
-
     if (document.body.classList.contains("light")) {
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
@@ -21,6 +22,7 @@ btn.onclick = () => {
     }
 };
 
+// Smooth scroll navbar
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
@@ -34,108 +36,122 @@ document.querySelectorAll('.navbar a').forEach(link => {
     });
 });
 
+// Scroll button
 document.querySelector('.btn[href="#about"]').addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
 
-
-// Contact
-const form = document.querySelector(".contact-form");
-
-// Inputlar
-const firstName = document.querySelector(".contact-firstname");
-const lastName = document.querySelector(".contact-lastname");
-const phone = document.querySelector(".contact-phone");
-const email = document.querySelector(".contact-email");
-const message = document.querySelector(".contact-textarea");
-
-// Helper funksiyasi: error va success class qo'shish
-function setError(input) {
-    input.classList.add("contact-error");
-    input.classList.remove("contact-success");
+// Change language
+function changeLang(lang) {
+    if (lang === "uz") window.location.href = "./index.html";
+    else if (lang === "ru") window.location.href = "./russ.html";
+    else if (lang === "en") window.location.href = "./english.html";
 }
 
-function setSuccess(input) {
-    input.classList.remove("contact-error");
-    input.classList.add("contact-success");
-}
+// Contact 
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".contact-form");
 
-// Form submit
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let isValid = true;
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    // First Name
-    if (firstName.value.trim() === "") {
-        setError(firstName);
-        isValid = false;
-    } else {
-        setSuccess(firstName);
-    }
+        const name = form.querySelector(".name").value;
+        const surname = form.querySelector(".surname").value;
+        const phone = form.querySelector(".phone").value;
+        const email = form.querySelector(".email").value;
+        const message = form.querySelector(".message").value;
 
-    // Last Name
-    if (lastName.value.trim() === "") {
-        setError(lastName);
-        isValid = false;
-    } else {
-        setSuccess(lastName);
-    }
+        const nameError = form.querySelector(".name").nextElementSibling;
+        const surnameError = form.querySelector(".surname").nextElementSibling;
+        const phoneError = form.querySelector(".phone").nextElementSibling;
+        const emailError = form.querySelector(".email").nextElementSibling;
+        const messageError = form.querySelector(".message").nextElementSibling;
 
-    // Phone (minimal check: length > 5)
-    if (phone.value.trim().length < 6) {
-        setError(phone);
-        isValid = false;
-    } else {
-        setSuccess(phone);
-    }
+        let valid = true;
 
-    // Email check (@gmail.com)
-    if (!email.value.endsWith("@gmail.com")) {
-        setError(email);
-        isValid = false;
-    } else {
-        setSuccess(email);
-    }
+        // Ism
+        if (name === "" || /\d/.test(name)) {
+            nameError.textContent = "Ism noto'g'ri";
+            nameError.style.color = "red";
+            nameError.style.fontSize = "small";
+            nameError.style.display = "block";
+            valid = false;
+        } else {
+            nameError.style.display = "none";
+        }
 
-    // Message
-    if (message.value.trim() === "") {
-        setError(message);
-        isValid = false;
-    } else {
-        setSuccess(message);
-    }
+        // Familiya
+        if (surname === "" || /\d/.test(surname)) {
+            surnameError.textContent = "Familiya noto'g'ri";
+            surnameError.style.color = "red";
+            surnameError.style.fontSize = "small";
+            surnameError.style.display = "block";
+            valid = false;
+        } else {
+            surnameError.style.display = "none";
+        }
 
-    // Success
-    if (isValid) {
-        alert("Message yuborildi ✅");
-        form.reset();
-        // Success classlarni ham olib tashlash
-        [firstName, lastName, phone, email, message].forEach(input => input.classList.remove("contact-success"));
-    }
-});
+        // Telefon
+        if (!/^\d+$/.test(phone)) {
+            phoneError.textContent = "Faqat raqam kiritilsin";
+            phoneError.style.color = "red";
+            phoneError.style.fontSize = "small";
+            phoneError.style.display = "block";
+            valid = false;
+        } else {
+            phoneError.style.display = "none";
+        }
 
-// Live validation
-[firstName, lastName, phone, email, message].forEach(input => {
-    input.addEventListener("input", () => {
-        if (input.classList.contains("contact-error")) {
-            if (input === email) {
-                if (email.value.endsWith("@gmail.com")) input.classList.remove("contact-error");
-            } else if (input === phone) {
-                if (phone.value.trim().length >= 6) input.classList.remove("contact-error");
-            } else {
-                if (input.value.trim() !== "") input.classList.remove("contact-error");
-            }
+        // Email
+        if (!email.includes("@gmail.com")) {
+            emailError.textContent = "@gmail.com bo'lishi kerak";
+            emailError.style.color = "red";
+            emailError.style.fontSize = "small";
+            emailError.style.display = "block";
+            valid = false;
+        } else {
+            emailError.style.display = "none";
+        }
+
+        // Xabar (placeholder bo‘lsa ham Telegramga jo‘natiladi)
+        if (message === "") {
+            messageError.textContent = "Xabar yozing";
+            messageError.style.color = "red";
+            messageError.style.fontSize = "small";
+            messageError.style.display = "block";
+            valid = false;
+        } else {
+            messageError.style.display = "none";
+        }
+
+        if (valid) {
+            const token = "8661152703:AAG8SbU6ELXkDa93nFmDiEeFIDmJCMuVn2E";
+            const chat_id = "5972469200";
+            const text = `📩 Yangi ariza!
+👤 Ismi: ${name}
+👤 Familiyasi: ${surname}
+📞 Telefon: ${phone}
+📧 Email: ${email}
+💬 Izoh: ${message}`;
+
+            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ chat_id, text })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.ok) {
+                        Swal.fire("Yuborildi ✅", "Xabar jo'natildi", "success");
+                        form.reset();
+                    } else {
+                        Swal.fire("Xatolik ❌", data.description, "error");
+                    }
+                })
+                .catch(() => {
+                    Swal.fire("Xatolik ❌", "Server bilan muammo", "error");
+                });
         }
     });
 });
-
-function changeLang(lang) {
-    if (lang === "uz") {
-        window.location.href = "./index.html";
-    } else if (lang === "ru") {
-        window.location.href = "./russ.html";
-    } else if (lang === "en") {
-        window.location.href = "./english.html";
-    }
-}

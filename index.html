@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -28,7 +30,7 @@
                     <a href="#memories">Xotiralar</a>
                 </nav>
                 <select id="langSelect" onchange="changeLang(this.value)">
-                    <option value="">Tilni Tanlang</option>
+                    <option value="">Select language</option>
 
                     <option value="uz">🇺🇿 O'zbek</option>
                     <option value="ru">🇷🇺 Русский</option>
@@ -534,29 +536,26 @@
 
     <section class="contact">
         <div class="container">
-            <h2 class="contact-title">
-                Men bilan <span class="contact-highlight">Bog'lanish!</span>
-            </h2>
-
             <form class="contact-form">
 
-                <div class="contact-row">
-                    <input class="contact-input contact-firstname" type="text" placeholder="Ismingiz">
-                    <input class="contact-input contact-lastname" type="text" placeholder="Familiyangiz">
-                </div>
+                <h2>Men bilan <span>Bog'lanish!</span></h2>
 
-                <div class="contact-row">
-                    <input class="contact-input contact-phone" type="text" placeholder="Telefon raqamingiz">
-                    <input class="contact-input contact-email" type="email" placeholder="Email manzilingiz">
-                </div>
+                <input type="text" class="input name" placeholder="Ismingiz">
+                <p class="error">Ism noto'g'ri</p>
 
-                <div class="contact-row contact-row-full">
-                    <textarea class="contact-textarea" placeholder="Xabaringizni yozing..."></textarea>
-                </div>
+                <input type="text" class="input surname" placeholder="Familiyangiz">
+                <p class="error">Familiya noto'g'ri</p>
 
-                <div class="contact-button-wrapper">
-                    <button class="contact-button" type="submit">Xabar yuborish</button>
-                </div>
+                <input type="text" class="input phone" placeholder="Telefon raqamingiz">
+                <p class="error">+998 bilan boshlanishi kerak</p>
+
+                <input type="text" class="input email" placeholder="Email manzilingiz">
+                <p class="error">@gmail.com yo'q</p>
+
+                <textarea class="input message" placeholder="Xabaringizni yozing..."></textarea>
+                <p class="error">Xabar yozing</p>
+
+                <button type="submit">Xabar yuborish</button>
 
             </form>
         </div>
@@ -574,6 +573,8 @@
         AOS.init();
     </script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>
