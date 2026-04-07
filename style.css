@@ -822,6 +822,8 @@ body .light {
 }
 
 .family-card {
+    width: 796px;
+height: 410px;
     background: #2a5298;
     color: #fff;
     border-radius: 20px;
