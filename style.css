@@ -43,7 +43,7 @@ body .light {
 
 .logo {
     color: #0ef;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none
 }
@@ -823,7 +823,7 @@ body .light {
 
 .family-card {
     width: 796px;
-height: 410px;
+    height: 410px;
     background: #2a5298;
     color: #fff;
     border-radius: 20px;
@@ -890,7 +890,7 @@ height: 410px;
 }
 
 .teacher-card img {
-    width: 230px;
+    width: 220px;
     height: 330px;
     object-fit: cover;
     margin-bottom: 15px;
@@ -900,7 +900,7 @@ height: 410px;
     display: flex;
     justify-content: center;
     gap: 25px;
-    flex-wrap: wrap;
+
 }
 
 .teacher-card {
