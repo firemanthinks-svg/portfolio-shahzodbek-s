@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahzodbek Portfolio</title>
+    <title>Shahzodbek's Portfolio</title>
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -29,9 +30,9 @@
                 </nav>
                 <select id="langSelect" onchange="changeLang(this.value)">
                     <option value="">Select language</option>
-                    <option value="uz">🇺🇿 Uzbek</option>
-                    <option value="ru">🇷🇺 Russian</option>
-                    <option value="en">🇺🇸 English</option>
+                    <option value="uz">🇺🇿 O'zbek</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="en" selected>🇺🇸 English</option>
                 </select>
                 <button id="mode"><i class="fa-solid fa-sun"></i></button>
             </div>
@@ -42,22 +43,19 @@
         <div class="container">
             <div class="home-wrapper">
                 <div class="content" data-aos="fade-right" data-aos-duration="800">
-                    <h3 data-aos="fade-right" data-aos-duration="800">Hello, this is me</h3>
+                    <h3 data-aos="fade-right" data-aos-duration="800">Hello, it's me</h3>
                     <h1 data-aos="fade-right" data-aos-duration="800">Abdiyozov Shahzodbek</h1>
                     <h3 data-aos="fade-right" data-aos-duration="800">And I'm <span class="text"></span></h3>
-                    <p data-aos="fade-right" data-aos-duration="800">Frontend Developer. I create modern websites using
-                        HTML, CSS, and JavaScript.</p>
-
+                    <p data-aos="fade-right" data-aos-duration="800">Frontend developer. I create modern websites using
+                        HTML, CSS and JavaScript.</p>
                     <div class="social">
                         <a target="_blank" href="https://t.me/Abdiyozov_Sh"><i class="fa-brands fa-telegram"></i></a>
                         <a target="_blank" href="https://www.instagram.com/mr.shahzodbek__/"><i
                                 class="fa-brands fa-instagram"></i></a>
                         <a href="tel:+998909026702"><i class="fa-solid fa-phone"></i></a>
                     </div>
-
                     <a href="#about" class="btn">About me</a>
                 </div>
-
                 <div class="img">
                     <img data-aos="fade-left" data-aos-duration="1200" src="./assets/shahzodbek.JPG" alt="Shahzodbek">
                 </div>
@@ -72,31 +70,18 @@
                     <img src="./assets/Shahzodbek-img-about_me.JPG" alt="Shahzodbek">
                 </div>
                 <div class="about-text">
-                    <h2>About <span>Me</span></h2>
-                    <h3>Frontend & Backend Developer</h3>
-                    <p data-aos="flip-down" data-aos-duration="1000">I am a programmer interested in creating modern and
-                        beautiful websites.
-                        I strive to keep my code simple, understandable, and user-friendly.
-                        I learn new things every day and keep improving myself.
-                        <br>
-                        I enjoy turning ideas into real and interactive websites.
-                        <br> My goal is to become a strong developer and create useful and modern projects.
-                    </p>
+                    <h2>About <span>me</span></h2>
+                    <h3>Frontend and Backend developer</h3>
+                    <p data-aos="flip-down" data-aos-duration="1000">I am a developer passionate about creating modern
+                        and beautiful websites. I strive to make my code simple, clear and user-friendly. Every day I
+                        learn new things and improve myself.<br>I love turning ideas into real and interactive
+                        websites.<br>My goal is to become a strong developer and create useful and modern projects.</p>
                     <div class="tags" data-aos="zoom-in-up" data-aos-duration="13000">
-                        <span>• HTML</span>
-                        <span>• CSS</span>
-                        <span>• JavaScript</span>
-                        <span>• Algorithms</span>
-                        <span>• Graphic Design</span>
-                        <span>• English language</span>
-                        <span>• Russian language</span>
-                        <span>• Mathematics</span>
-                        <span>• TeamPlayer</span>
-                        <span>• Creative</span>
-                        <span>• Startup</span>
-                        <span>• AlwaysLearning</span>
+                        <span>• HTML</span> <span>• CSS</span> <span>• JavaScript</span> <span>• Algorithms</span>
+                        <span>• Graphic design</span> <span>• English</span> <span>• Russian</span>
+                        <span>• Mathematics</span> <span>• Teamwork</span> <span>• Creativity</span>
+                        <span>• Startup</span> <span>• Constant learning</span>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -108,58 +93,55 @@
                 <ul class="services-list">
                     <li class="services-item" data-aos="fade-up" data-aos-duration="800">
                         <div class="item-title">
-                            <div class="item-header">
-                                <img src="./assets/ux&ui.png" alt="" class="item-img">
+                            <div class="item-header"><img src="./assets/ux&ui.png" alt="UX&UI" class="item-img">
                                 <h3 class="item-job">UI/UX Designer</h3>
                             </div>
-
-                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX Designer with a passion for
-                                crafting engaging, intuitive, and visually appealing digital experiences. Skilled in
-                                user-centered design principles, wireframing, prototyping, and interactive design.</p>
+                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX designer. Passionate about
+                                creating engaging, intuitive and visually appealing digital experiences. Skilled in
+                                user-centered design principles, wireframing, prototyping and interactive design.</p>
                         </div>
                         <p class="foiz-txt">85%</p>
                         <div class="foiz">
-                            <div class="ichidagi-bg-Ui"> </div>
+                            <div class="ichidagi-bg-Ui"></div>
                         </div>
                     </li>
                     <li class="services-item" data-aos="fade-up" data-aos-duration="1100">
                         <div class="item-title">
-                            <div class="item-header">
-                                <img src="./assets/web developer.png" alt="" class="item-img">
+                            <div class="item-header"><img src="./assets/web developer.png" alt="web-dev"
+                                    class="item-img">
                                 <h3 class="item-job">Web Development</h3>
                             </div>
-                            <p class="item_pharaghaf">Building responsive, fast, and scalable websites with modern
-                                technologies. Focused on delivering seamless user experiences and clean code
-                                architecture.</p>
+                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX designer. Passionate about
+                                creating engaging, intuitive and visually appealing digital experiences. Skilled in
+                                user-centered design principles, wireframing, prototyping and interactive design.</p>
                         </div>
                         <p class="foiz-txt">88%</p>
                         <div class="foiz">
-                            <div class="ichidagi-bg-web"> </div>
+                            <div class="ichidagi-bg-web"></div>
                         </div>
                     </li>
                     <li class="services-item" data-aos="fade-up" data-aos-duration="1300">
                         <div class="item-title">
-                            <div class="item-header">
-                                <img src="./assets/figma.png" alt="" class="item-img">
-                                <h3 class="item-job">Figma Specialist</h3>
+                            <div class="item-header"><img src="./assets/figma.png" alt="Figma" class="item-img">
+                                <h3 class="item-job">Figma Expert</h3>
                             </div>
-                            <p class="item_pharaghaf">Expert in turning ideas into high-fidelity interactive prototypes.
-                                Skilled in component libraries, auto layouts, and design systems for efficient
-                                collaboration with developers.</p>
+                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX designer. Passionate about
+                                creating engaging, intuitive and visually appealing digital experiences. Skilled in
+                                user-centered design principles, wireframing, prototyping and interactive design.</p>
                         </div>
                         <p class="foiz-txt">88%</p>
                         <div class="foiz">
-                            <div class="ichidagi-bg-fig"> </div>
+                            <div class="ichidagi-bg-fig"></div>
                         </div>
                     </li>
                     <li class="services-item" data-aos="fade-up" data-aos-duration="950">
                         <div class="item-title">
-                            <div class="item-header"> <img src="./assets/QA Tester.png" alt="" class="item-img">
+                            <div class="item-header"><img src="./assets/QA Tester.png" alt="QA" class="item-img">
                                 <h3 class="item-job">QA Tester</h3>
                             </div>
-                            <p class="item_pharaghaf">Ensuring software quality through manual and automated testing.
-                                Experienced in identifying bugs, writing test cases, and improving overall product
-                                reliability.</p>
+                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX designer. Passionate about
+                                creating engaging, intuitive and visually appealing digital experiences. Skilled in
+                                user-centered design principles, wireframing, prototyping and interactive design.</p>
                             <p class="foiz-txt">90%</p>
                             <div class="foiz">
                                 <div class="ichidagi-bg-qa"></div>
@@ -168,12 +150,13 @@
                     </li>
                     <li class="services-item" data-aos="fade-up" data-aos-duration="1150">
                         <div class="item-title">
-                            <div class="item-header"><img src="./assets/problem solving.png" alt="" class="item-img">
+                            <div class="item-header"><img src="./assets/problem solving.png" alt="problem solving"
+                                    class="item-img">
                                 <h3 class="item-job">Problem Solving</h3>
                             </div>
-                            <p class="item_pharaghaf">Strong analytical mindset with a passion for breaking down complex
-                                problems into efficient solutions. Experienced in logic building and algorithm
-                                optimization.</p>
+                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX designer. Passionate about
+                                creating engaging, intuitive and visually appealing digital experiences. Skilled in
+                                user-centered design principles, wireframing, prototyping and interactive design.</p>
                             <p class="foiz-txt">89%</p>
                             <div class="foiz">
                                 <div class="ichidagi-bg-pro"></div>
@@ -182,13 +165,13 @@
                     </li>
                     <li class="services-item" data-aos="fade-up" data-aos-duration="1350">
                         <div class="item-title">
-                            <div class="item-header"> <img src="./assets/frontend developer.png" alt=""
+                            <div class="item-header"><img src="./assets/frontend developer.png" alt="frontend"
                                     class="item-img">
                                 <h3 class="item-job">Frontend Developer</h3>
                             </div>
-                            <p class="item_pharaghaf">Creating interactive and dynamic user interfaces using HTML, CSS,
-                                JavaScript and modern frameworks. Focused on performance, accessibility, and responsive
-                                design.</p>
+                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX designer. Passionate about
+                                creating engaging, intuitive and visually appealing digital experiences. Skilled in
+                                user-centered design principles, wireframing, prototyping and interactive design.</p>
                             <p class="foiz-txt">94%</p>
                             <div class="foiz">
                                 <div class="ichidagi-bg-fro"></div>
@@ -197,15 +180,15 @@
                     </li>
                     <li class="services-item" data-aos="fade-up" data-aos-duration="1400">
                         <div class="item-title">
-                            <div class="item-header"><img src="./assets/backend.png" alt="" class="item-img">
+                            <div class="item-header"><img src="./assets/backend.png" alt="backend" class="item-img">
                                 <h3 class="item-job">Backend Developer</h3>
                             </div>
-                            <p class="item_pharaghaf">Building robust server-side applications and RESTful APIs.
-                                Knowledgeable in databases, authentication, and server logic to support frontend
-                                functionality.</p>
+                            <p class="item_pharaghaf">Creative and detail-oriented UI/UX designer. Passionate about
+                                creating engaging, intuitive and visually appealing digital experiences. Skilled in
+                                user-centered design principles, wireframing, prototyping and interactive design.</p>
                             <p class="foiz-txt">91%</p>
                             <div class="foiz">
-                                <div class="ichidagi-bg-back"> </div>
+                                <div class="ichidagi-bg-back"></div>
                             </div>
                         </div>
                     </li>
@@ -216,269 +199,178 @@
 
     <section class="projects" id="projects">
         <div class="container">
-
             <h2 class="projects-title">My Projects</h2>
-
             <div class="projects-wrapper">
-
-                <a data-aos="fade-right" data-aos-duration="900" href="https://clearsky-sayti.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/cleasky.jpg" alt="Project">
+                <a data-aos="fade-right" href="https://clearsky-sayti.netlify.app/" class="project-card"><img
+                        src="./assets/cleasky.jpg">
                     <div class="project-info">
                         <h3>Clearsky</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-
-                <a data-aos="fade-up" data-aos-duration="1100" href="https://trafalgar67.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/trafalgar-photo.jpg" alt="Project">
+                <a data-aos="fade-up" href="https://trafalgar67.netlify.app/" class="project-card"><img
+                        src="./assets/trafalgar-photo.jpg">
                     <div class="project-info">
                         <h3>Trafalgar</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-
-                <a data-aos="fade-left" data-aos-duration="900" href="https://movie-cha.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/movie-photo.jpg" alt="Project">
+                <a data-aos="fade-left" href="https://movie-cha.netlify.app/" class="project-card"><img
+                        src="./assets/movie-photo.jpg">
                     <div class="project-info">
                         <h3>Movie</h3>
                         <p>HTML • CSS • JavaScript</p>
                     </div>
                 </a>
-                <a data-aos="fade-right" data-aos-duration="1300" href="https://emoji-sayti.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/emoji-rasm.png" alt="Project">
+                <a data-aos="fade-right" href="https://emoji-sayti.netlify.app/" class="project-card"><img
+                        src="./assets/emoji-rasm.png">
                     <div class="project-info">
                         <h3>Emoji</h3>
                         <p>HTML • CSS • JavaScript</p>
                     </div>
                 </a>
-                <a data-aos="fade-up" data-aos-duration="1400" href="https://timer-sekundomer.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/sekundomer&timer.png" alt="Project">
+                <a data-aos="fade-up" href="https://timer-sekundomer.netlify.app/" class="project-card"><img
+                        src="./assets/sekundomer&timer.png">
                     <div class="project-info">
                         <h3>Stopwatch & Timer</h3>
                         <p>HTML • CSS • JavaScript</p>
                     </div>
                 </a>
-                <a data-aos="fade-left" data-aos-duration="1300" href="https://playstation-sayti.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/playstation.png" alt="Project">
+                <a data-aos="fade-left" href="https://playstation-sayti.netlify.app/" class="project-card"><img
+                        src="./assets/playstation.png">
                     <div class="project-info">
                         <h3>Playstation</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-                <a data-aos="fade-right" data-aos-duration="1300" href="https://insta-look.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/insta-like.png" alt="Project">
+                <a data-aos="fade-right" href="https://insta-look.netlify.app/" class="project-card"><img
+                        src="./assets/insta-like.png">
                     <div class="project-info">
                         <h3>Instagram</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-                <a data-aos="fade-up" data-aos-duration="1300" href="https://insta-look.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/parrot-photo.png" alt="Project">
+                <a data-aos="fade-up" href="https://insta-look.netlify.app/" class="project-card"><img
+                        src="./assets/parrot-photo.png">
                     <div class="project-info">
                         <h3>Parrot</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-
-
             </div>
-
         </div>
     </section>
 
     <section class="classmates" id="classmates">
         <div class="container">
-
-            <div class="main-banner">
-                <img data-aos="zoom-in-down" data-aos-duration="1000" src="./assets/sinfdoshlarim.JPG">
-                <h2>My Classmates</h2>
+            <div class="main-banner"><img data-aos="zoom-in-down" src="./assets/sinfdoshlarim.JPG">
+                <h2>Classmates</h2>
             </div>
-
             <h4 class="frinteds-title">My Friends</h4>
-
             <div class="friends-slider">
                 <div class="friends-track">
-
-                    <!-- ORIGINAL -->
-                    <div class="friend-card">
-                        <img src="./assets/jaloliddin-photo.JPG">
-                        <h3>Jaloliddin</h3>
-                        <a target="_blank" href="https://t.me/True_or_Fals_e"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/jaloliddin-photo.JPG">
+                        <h3>Jaloliddin</h3><a target="_blank" href="https://t.me/True_or_Fals_e"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/umid-photo.JPG">
-                        <h3>Umid</h3>
-                        <a target="_blank" href="https://t.me/UmidjonSadullayev"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a href="https://portfolio-umidjon.netlify.app/">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/umid-photo.JPG">
+                        <h3>Umid</h3><a target="_blank" href="https://t.me/UmidjonSadullayev"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a
+                            href="https://portfolio-umidjon.netlify.app/">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/bobur-photo.JPG">
-                        <h3>Bobur</h3>
-                        <a target="_blank" href="https://t.me/Muhammabobur69"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a target="_blank" href="https://www.instagram.com/"><i
-                                class="fa-brands fa-instagram"></i>Instagram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/bobur-photo.JPG">
+                        <h3>Bobur</h3><a target="_blank" href="https://t.me/Muhammabobur69"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
+                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
+                            href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/yusufbek-poto.png">
-                        <h3>Yusufbek</h3>
-                        <a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a target="_blank" href="https://www.instagram.com/"><i
-                                class="fa-brands fa-instagram"></i>Instagram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/yusufbek-poto.png">
+                        <h3>Yusufbek</h3><a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
+                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
+                            href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/nurmuhammad-photo.JPG">
-                        <h3>Nurmuhammad</h3>
-                        <a target="_blank" href="https://t.me/GOAT_FV8"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a target="_blank" href="https://www.instagram.com/"><i
-                                class="fa-brands fa-instagram"></i>Instagram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/nurmuhammad-photo.JPG">
+                        <h3>Nurmuhammad</h3><a target="_blank" href="https://t.me/GOAT_FV8"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
+                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
+                            href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/akbarjo.JPG">
-                        <h3>Akbarjon</h3>
-                        <a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/akbarjo.JPG">
+                        <h3>Akbarjon</h3><a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Portfolio</a>
                     </div>
-
-                    <!-- DUPLICATE (IMPORTANT!!!) -->
-                    <div class="friend-card">
-                        <img src="./assets/jaloliddin-photo.JPG">
-                        <h3>Jaloliddin</h3>
-                        <a target="_blank" href="https://t.me/True_or_Fals_e"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a href="#">Portfolio</a>
+                    <!-- duplicates for scroll -->
+                    <div class="friend-card"><img src="./assets/jaloliddin-photo.JPG">
+                        <h3>Jaloliddin</h3><a target="_blank" href="https://t.me/True_or_Fals_e"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/umid-photo.JPG">
-                        <h3>Umid</h3>
-                        <a target="_blank" href="https://t.me/UmidjonSadullayev"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a href="https://portfolio-umidjon.netlify.app/">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/umid-photo.JPG">
+                        <h3>Umid</h3><a target="_blank" href="https://t.me/UmidjonSadullayev"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a
+                            href="https://portfolio-umidjon.netlify.app/">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/bobur-photo.JPG">
-                        <h3>Bobur</h3>
-                        <a target="_blank" href="https://t.me/Muhammabobur69"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a target="_blank" href="https://www.instagram.com/"><i
-                                class="fa-brands fa-instagram"></i>Instagram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/bobur-photo.JPG">
+                        <h3>Bobur</h3><a target="_blank" href="https://t.me/Muhammabobur69"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
+                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
+                            href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/yusufbek-poto.png">
-                        <h3>Yusufbek</h3>
-                        <a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a target="_blank" href="https://www.instagram.com/"><i
-                                class="fa-brands fa-instagram"></i>Instagram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/yusufbek-poto.png">
+                        <h3>Yusufbek</h3><a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
+                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
+                            href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/nurmuhammad-photo.JPG">
-                        <h3>Nurmuhammad</h3>
-                        <a target="_blank" href="https://t.me/GOAT_FV8"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a target="_blank" href="https://www.instagram.com/"><i
-                                class="fa-brands fa-instagram"></i>Instagram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/nurmuhammad-photo.JPG">
+                        <h3>Nurmuhammad</h3><a target="_blank" href="https://t.me/GOAT_FV8"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
+                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
+                            href="#">Portfolio</a>
                     </div>
-
-                    <div class="friend-card">
-                        <img src="./assets/akbarjo.JPG">
-                        <h3>Akbarjon</h3>
-                        <a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a>
-                        <a href="#">Portfolio</a>
+                    <div class="friend-card"><img src="./assets/akbarjo.JPG">
+                        <h3>Akbarjon</h3><a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Portfolio</a>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </section>
 
     <section class="family" id="family">
         <div class="container">
-            <h2>My Family</h2>
+            <h2>Partner organizations</h2>
             <div class="family-wrapper">
-                <!-- Big image -->
-                <div class="family_big-img">
-                    <img src="https://cdn-blog.findmykids.org/2024/08/shutterstock_2429217801-1.jpg" alt="">
-                </div>
-                <!-- Cards -->
+                <div class="family_big-img"><img src="./assets/hamkorlar big rasm.jpg" alt="partners"></div>
                 <div class="cards">
-
-                    <div class="family-card">
-                        <img src="https://miro.medium.com/1*1jR7o3-83wD3Lk62dz_bnw.jpeg">
-                        <h3>My Father</h3>
-                        <p>They support me.</p>
+                    <div class="family-card"><img src="./assets/Valuation.png">
+                        <h3>VALUATION LLC</h3>
+                        <p>VALUATION is an appraisal company dealing with all types of property since 2015.</p>
                     </div>
-
-                    <div class="family-card">
-                        <img src="https://miro.medium.com/1*1jR7o3-83wD3Lk62dz_bnw.jpeg">
-                        <h3>My Mother</h3>
-                        <p>They are kind and always by my side.</p>
+                    <div class="family-card"><img src="./assets/logistika-photo.jpg">
+                        <h3>Rasulbek group</h3>
+                        <p>A logistics company engaged in international logistics since 2015.</p>
                     </div>
-
-                    <div class="family-card">
-                        <img src="https://miro.medium.com/1*1jR7o3-83wD3Lk62dz_bnw.jpeg">
-                        <h3>My Brother</h3>
-                        <p>They give me help and motivation.</p>
-                    </div>
-
                 </div>
-
             </div>
         </div>
     </section>
 
     <section class="teachers">
         <div class="container">
-            <h2>My Teachers</h2>
-
+            <h2>My teachers</h2>
             <div class="teachers-wrapper">
-                <div class="teacher-card" data-aos="zoom-out-right" data-aos-duration="1000">
-                    <img src="./assets/Matematika-ustz.png" alt="">
-                    <h3>Mathematics Teacher</h3>
-                    <p>Who taught me mathematics.</p>
+                <div class="teacher-card" data-aos="zoom-out-right"><img src="./assets/Matematika-ustz.png">
+                    <h3>Math teacher</h3>
+                    <p>Those who taught me mathematics.</p>
                 </div>
-
-                <div class="teacher-card" data-aos="zoom-out-down" data-aos-duration="1000">
-                    <img src="./assets/shahlo-ustoz.png" alt="">
-                    <h3>English Teacher</h3>
-                    <p>Who helped me improve my English.</p>
+                <div class="teacher-card" data-aos="zoom-out-down"><img src="./assets/shahlo-ustoz.png">
+                    <h3>English teacher</h3>
+                    <p>Those who improved my English.</p>
                 </div>
-
-                <div class="teacher-card" data-aos="zoom-out-left" data-aos-duration="1000">
-                    <img src="./assets/habibuloh-ustoz.png" alt="">
-                    <h3>My Mentor, My Light</h3>
-                    <p>Who taught me frontend programming.</p>
+                <div class="teacher-card" data-aos="zoom-out-left"><img src="./assets/habibuloh-ustoz.png">
+                    <h3>My mentor, my light</h3>
+                    <p>The one who taught me frontend development.</p>
                 </div>
             </div>
         </div>
@@ -486,75 +378,51 @@
 
     <section class="memories" id="memories">
         <div class="container">
-
             <h2 class="section-title">Memories</h2>
-
             <div class="memories-wrapper">
-
-                <div class="memory-card" data-aos="fade-up" data-aos-duration="900">
-                    <img src="./assets/fugtbol-time.png" alt="">
+                <div class="memory-card" data-aos="fade-up"><img src="./assets/fugtbol-time.png">
                     <div class="memory-content">
                         <h3>Football</h3>
-                        <p>This picture is from when we won the 7th "A" Russian class championship.</p>
+                        <p>This photo is when we beat 7th grade "A".</p>
                     </div>
                 </div>
-
-                <div class="memory-card" data-aos="fade-up" data-aos-duration="1400">
-                    <img src="./assets/ozbekiston-bog'i .png" alt="">
+                <div class="memory-card" data-aos="fade-up"><img src="./assets/ozbekiston-bog'i .png">
                     <div class="memory-content">
-                        <h3>With My Class</h3>
-                        <p>In this picture, we went to Uzbekistan Park with my class.</p>
+                        <h3>With my class</h3>
+                        <p>We went to Uzbekistan park with the whole class.</p>
                     </div>
                 </div>
-
-                <div class="memory-card" data-aos="fade-up" data-aos-duration="1700">
-                    <img src="./assets/zakovat-rasm1.png" alt="">
+                <div class="memory-card" data-aos="fade-up"><img src="./assets/zakovat-rasm1.png">
                     <div class="memory-content">
                         <h3>Zakovat</h3>
-                        <p>This picture was taken after we participated and won in Zakovat.</p>
+                        <p>Photo after winning the intellectual game "Zakovat".</p>
                     </div>
                 </div>
-
-                <div class="memory-card" data-aos="fade-up" data-aos-duration="2000">
-                    <img src="./assets/codying-rush_rasm1.JPG" alt="">
+                <div class="memory-card" data-aos="fade-up"><img src="./assets/codying-rush_rasm1.JPG">
                     <div class="memory-content">
                         <h3>Coding Rush</h3>
-                        <p>This picture is from when we took 1st place in "Coding Rush" among 7th graders.</p>
+                        <p>We took 1st place among 7th grades in "Coding Rush".</p>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-
     <section class="contact">
         <div class="container">
-            <h2 class="contact-title">
-                Contact <span class="contact-highlight">Me!</span>
-            </h2>
-
             <form class="contact-form">
-
-                <div class="contact-row">
-                    <input class="contact-input contact-firstname" type="text" placeholder="First Name">
-                    <input class="contact-input contact-lastname" type="text" placeholder="Last Name">
-                </div>
-
-                <div class="contact-row">
-                    <input class="contact-input contact-phone" type="text" placeholder="Mobile Number">
-                    <input class="contact-input contact-email" type="email" placeholder="Your Email">
-                </div>
-
-                <div class="contact-row contact-row-full">
-                    <textarea class="contact-textarea" placeholder="Your Message..."></textarea>
-                </div>
-
-                <div class="contact-button-wrapper">
-                    <button class="contact-button" type="submit">Send Message</button>
-                </div>
-
+                <h2>Contact <span>me!</span></h2>
+                <input type="text" class="input name" placeholder="Your name">
+                <p class="error">Invalid name</p>
+                <input type="text" class="input surname" placeholder="Your surname">
+                <p class="error">Invalid surname</p>
+                <input type="text" class="input phone" placeholder="Phone number">
+                <p class="error">Must start with +998</p>
+                <input type="text" class="input email" placeholder="Email address">
+                <p class="error">Missing @gmail.com</p>
+                <textarea class="input message" placeholder="Write your message..."></textarea>
+                <p class="error">Write a message</p>
+                <button type="submit">Send message</button>
             </form>
         </div>
     </section>
@@ -562,15 +430,15 @@
     <footer class="fotter">
         <div class="container">
             <div class="fotter-wrapper">
-                <p class="fotter-txt">Made by Abdiyozov Shahzodbek #2026</p>
+                <p class="fotter-txt">Created by Abdiyozov Shahzodbek #2026</p>
             </div>
         </div>
     </footer>
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script> AOS.init(); </script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
