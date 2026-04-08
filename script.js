@@ -13,6 +13,7 @@ let icon = btn.querySelector("i");
 
 btn.onclick = () => {
     document.body.classList.toggle("light");
+
     if (document.body.classList.contains("light")) {
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
@@ -26,9 +27,11 @@ btn.onclick = () => {
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
+
         if (href.startsWith('#')) {
             e.preventDefault();
             const target = document.querySelector(href);
+
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
             }
@@ -49,91 +52,53 @@ function changeLang(lang) {
     else if (lang === "en") window.location.href = "./english.html";
 }
 
-// Contact 
+// CONTACT FORM (YANGILANGAN)
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".contact-form");
+
+    function setError(input, condition) {
+        if (condition) {
+            input.classList.add("error");
+            return false;
+        } else {
+            input.classList.remove("error");
+            return true;
+        }
+    }
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const name = form.querySelector(".name").value;
-        const surname = form.querySelector(".surname").value;
-        const phone = form.querySelector(".phone").value;
-        const email = form.querySelector(".email").value;
-        const message = form.querySelector(".message").value;
-
-        const nameError = form.querySelector(".name").nextElementSibling;
-        const surnameError = form.querySelector(".surname").nextElementSibling;
-        const phoneError = form.querySelector(".phone").nextElementSibling;
-        const emailError = form.querySelector(".email").nextElementSibling;
-        const messageError = form.querySelector(".message").nextElementSibling;
+        const name = form.querySelector(".name");
+        const surname = form.querySelector(".surname");
+        const phone = form.querySelector(".phone");
+        const email = form.querySelector(".email");
+        const message = form.querySelector(".message");
 
         let valid = true;
 
-        // Ism
-        if (name === "" || /\d/.test(name)) {
-            nameError.textContent = "Ism noto'g'ri";
-            nameError.style.color = "red";
-            nameError.style.fontSize = "small";
-            nameError.style.display = "block";
-            valid = false;
-        } else {
-            nameError.style.display = "none";
-        }
-
-        // Familiya
-        if (surname === "" || /\d/.test(surname)) {
-            surnameError.textContent = "Familiya noto'g'ri";
-            surnameError.style.color = "red";
-            surnameError.style.fontSize = "small";
-            surnameError.style.display = "block";
-            valid = false;
-        } else {
-            surnameError.style.display = "none";
-        }
-
-        // Telefon
-        if (!/^\d+$/.test(phone)) {
-            phoneError.textContent = "Faqat raqam kiritilsin";
-            phoneError.style.color = "red";
-            phoneError.style.fontSize = "small";
-            phoneError.style.display = "block";
-            valid = false;
-        } else {
-            phoneError.style.display = "none";
-        }
-
-        // Email
-        if (!email.includes("@gmail.com")) {
-            emailError.textContent = "@gmail.com bo'lishi kerak";
-            emailError.style.color = "red";
-            emailError.style.fontSize = "small";
-            emailError.style.display = "block";
-            valid = false;
-        } else {
-            emailError.style.display = "none";
-        }
-
-        // Xabar (placeholder bo‘lsa ham Telegramga jo‘natiladi)
-        if (message === "") {
-            messageError.textContent = "Xabar yozing";
-            messageError.style.color = "red";
-            messageError.style.fontSize = "small";
-            messageError.style.display = "block";
-            valid = false;
-        } else {
-            messageError.style.display = "none";
-        }
+        if (!setError(name, name.value === "" || /\d/.test(name.value))) valid = false;
+        if (!setError(surname, surname.value === "" || /\d/.test(surname.value))) valid = false;
+        if (!setError(phone, !/^\d+$/.test(phone.value))) valid = false;
+        if (!setError(email, !email.value.includes("@gmail.com"))) valid = false;
+        if (!setError(message, message.value === "")) valid = false;
 
         if (valid) {
             const token = "8661152703:AAG8SbU6ELXkDa93nFmDiEeFIDmJCMuVn2E";
             const chat_id = "5972469200";
-            const text = `📩 Yangi ariza!
-👤 Ismi: ${name}
-👤 Familiyasi: ${surname}
-📞 Telefon: ${phone}
-📧 Email: ${email}
-💬 Izoh: ${message}`;
+
+            const text = `
+📩 Yangi ariza!
+
+👤 Ismi: ${name.value}
+👤 Familiyasi: ${surname.value}
+
+📞 Telefon: ${phone.value}
+📧 Email: ${email.value}
+
+💬 Xabar:
+${message.value}
+`;
 
             fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
                 method: "POST",
@@ -145,12 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (data.ok) {
                         Swal.fire("Yuborildi ✅", "Xabar jo'natildi", "success");
                         form.reset();
-                    } else {
-                        Swal.fire("Xatolik ❌", data.description, "error");
+                        document.querySelectorAll(".input").forEach(i => i.classList.remove("error"));
                     }
-                })
-                .catch(() => {
-                    Swal.fire("Xatolik ❌", "Server bilan muammo", "error");
                 });
         }
     });
