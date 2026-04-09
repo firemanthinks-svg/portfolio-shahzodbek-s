@@ -22,7 +22,7 @@ body .light {
 .container {
     width: 1280px;
     padding: 0px 20px;
-    margin: auto
+    margin: 0 auto;
 }
 
 /* header */
