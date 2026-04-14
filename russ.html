@@ -8,25 +8,34 @@
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
 
-    <header class="header" data-aos="fade-down" data-aos-duration="1000">
+    <header class="header" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
         <div class="container">
             <div class="header-wrapper">
-                <a class="logo" href="#">&lt;Shahzodbek /&gt;</a>
+                <a class="logo" href="#">&lt;Шахзодбек /&gt;</a>
                 <nav class="navbar">
                     <a href="#home">Главная</a>
                     <a href="#about">Обо мне</a>
                     <a href="#my-services">Услуги</a>
                     <a href="#projects">Проекты</a>
                     <a href="#classmates">Друзья</a>
-                    <a href="#family">Партнёры</a>
+                    <a href="#family">Партнеры</a>
                     <a href="#teachers">Учителя</a>
                     <a href="#memories">Воспоминания</a>
                 </nav>
+                <select id="langSelect" onchange="changeLang(this.value)">
+                    <option value="">Выбрать язык</option>
+                    <option value="uz">🇺🇿 O'zbek</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="en">🇺🇸 English</option>
+                </select>
                 <button id="mode"><i class="fa-solid fa-sun"></i></button>
             </div>
         </div>
@@ -35,22 +44,27 @@
     <section class="home" id="home">
         <div class="container">
             <div class="home-wrapper">
-                <div class="content" data-aos="fade-right" data-aos-duration="800">
+                <div class="content" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-duration="800">
                     <h3 data-aos="fade-right" data-aos-duration="800">Привет, это я</h3>
                     <h1 data-aos="fade-right" data-aos-duration="800">Абдиёзов Шахзодбек</h1>
-                    <h3 data-aos="fade-right" data-aos-duration="800">И я <span>Frontend-разработчик</span></h3>
-                    <p data-aos="fade-right" data-aos-duration="800">Frontend-разработчик. Создаю современные сайты с
+                    <h3 data-aos="fade-right" data-aos-duration="800">И я <span class="text"></span></h3>
+                    <p data-aos="fade-right" data-aos-duration="800">Фронтенд разработчик. Создаю современные сайты с
                         помощью HTML, CSS и JavaScript.</p>
+
                     <div class="social">
                         <a target="_blank" href="https://t.me/Abdiyozov_Sh"><i class="fa-brands fa-telegram"></i></a>
                         <a target="_blank" href="https://www.instagram.com/mr.shahzodbek__/"><i
                                 class="fa-brands fa-instagram"></i></a>
                         <a href="tel:+998909026702"><i class="fa-solid fa-phone"></i></a>
                     </div>
+
                     <a href="#about" class="btn">Обо мне</a>
                 </div>
+
                 <div class="img">
-                    <img data-aos="fade-left" data-aos-duration="1200" src="./assets/shahzodbek.JPG" alt="Shahzodbek">
+                    <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1200"
+                        src="./assets/shahzodbek.JPG" alt="Шахзодбек">
                 </div>
             </div>
         </div>
@@ -59,18 +73,20 @@
     <section class="about-section" id="about">
         <div class="container">
             <div class="about-wrapper">
-                <div class="about-image" data-aos="flip-left" data-aos-duration="800">
-                    <img src="./assets/Shahzodbek-img-about_me.JPG" alt="Shahzodbek">
+                <div class="about-image" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-duration="800">
+                    <img src="./assets/Shahzodbek-img-about_me.JPG" alt="Шахзодбек">
                 </div>
                 <div class="about-text">
                     <h2>Обо <span>мне</span></h2>
-                    <h3>Frontend и Backend разработчик</h3>
-                    <p data-aos="flip-down" data-aos-duration="1000">
-                        Я разработчик, увлекающийся созданием современных и красивых веб-сайтов. Стараюсь делать код
-                        простым, понятным и удобным для пользователя. Каждый день учусь новому и развиваюсь.
+                    <h3>Фронтенд и Бэкенд разработчик</h3>
+                    <p data-aos="flip-down" data-aos-duration="1000">Я разработчик, увлеченный созданием современных и
+                        красивых веб-сайтов.
+                        Стараюсь, чтобы мой код был простым, понятным и удобным для пользователя.
+                        Каждый день я учусь новому и совершенствуюсь.
                         <br>
-                        Мне нравится превращать идеи в реальные интерактивные веб-сайты.
-                        <br> Моя цель — стать сильным разработчиком и создавать полезные современные проекты.
+                        Мне нравится превращать идеи в реальные и интерактивные веб-сайты.
+                        <br> Моя цель — стать сильным разработчиком и создавать полезные и современные проекты.
                     </p>
                     <div class="tags" data-aos="zoom-in-up" data-aos-duration="13000">
                         <span>• HTML</span>
@@ -86,6 +102,7 @@
                         <span>• Стартап</span>
                         <span>• Постоянное обучение</span>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -95,62 +112,68 @@
         <div class="container">
             <div class="services__wrapper">
                 <ul class="services-list">
-                    <li class="services-item" data-aos="fade-up" data-aos-duration="800">
+                    <li class="services-item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="800">
                         <div class="item-title">
                             <div class="item-header">
-                                <img src="./assets/ux&ui.png" alt="UX&UI" class="item-img">
+                                <img src="./assets/ux&ui.png" alt="UX&UI-foto" class="item-img">
                                 <h3 class="item-job">UI/UX Дизайнер</h3>
                             </div>
-                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечён созданием
-                                интересных, интуитивных и визуально привлекательных цифровых продуктов. Владею
-                                принципами пользовательского дизайна, созданием wireframe, прототипированием и
+
+                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечен созданием
+                                интересных, интуитивно понятных и визуально привлекательных цифровых решений. Владею
+                                принципами человеко-ориентированного дизайна, вайрфреймами, прототипированием и
                                 интерактивным дизайном.</p>
                         </div>
                         <p class="foiz-txt">85%</p>
                         <div class="foiz">
-                            <div class="ichidagi-bg-Ui"></div>
+                            <div class="ichidagi-bg-Ui"> </div>
                         </div>
                     </li>
-                    <li class="services-item" data-aos="fade-up" data-aos-duration="1100">
+                    <li class="services-item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="1100">
                         <div class="item-title">
                             <div class="item-header">
-                                <img src="./assets/web developer.png" alt="web-dev" class="item-img">
-                                <h3 class="item-job">Веб-программирование</h3>
+                                <img src="./assets/web developer.png" alt="web-developer" class="item-img">
+                                <h3 class="item-job">Веб разработка</h3>
                             </div>
-                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечён созданием
-                                интересных, интуитивных и визуально привлекательных цифровых продуктов. Владею
-                                принципами пользовательского дизайна, созданием wireframe, прототипированием и
+                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечен созданием
+                                интересных, интуитивно понятных и визуально привлекательных цифровых решений. Владею
+                                принципами человеко-ориентированного дизайна, вайрфреймами, прототипированием и
                                 интерактивным дизайном.</p>
                         </div>
                         <p class="foiz-txt">88%</p>
                         <div class="foiz">
-                            <div class="ichidagi-bg-web"></div>
+                            <div class="ichidagi-bg-web"> </div>
                         </div>
                     </li>
-                    <li class="services-item" data-aos="fade-up" data-aos-duration="1300">
+                    <li class="services-item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="1300">
                         <div class="item-title">
                             <div class="item-header">
-                                <img src="./assets/figma.png" alt="figma" class="item-img">
+                                <img src="./assets/figma.png" alt="" class="item-img">
                                 <h3 class="item-job">Специалист Figma</h3>
                             </div>
-                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечён созданием
-                                интересных, интуитивных и визуально привлекательных цифровых продуктов. Владею
-                                принципами пользовательского дизайна, созданием wireframe, прототипированием и
+                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечен созданием
+                                интересных, интуитивно понятных и визуально привлекательных цифровых решений. Владею
+                                принципами человеко-ориентированного дизайна, вайрфреймами, прототипированием и
                                 интерактивным дизайном.</p>
                         </div>
                         <p class="foiz-txt">88%</p>
                         <div class="foiz">
-                            <div class="ichidagi-bg-fig"></div>
+                            <div class="ichidagi-bg-fig"> </div>
                         </div>
                     </li>
-                    <li class="services-item" data-aos="fade-up" data-aos-duration="950">
+                    <li class="services-item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="950">
                         <div class="item-title">
-                            <div class="item-header"><img src="./assets/QA Tester.png" alt="qa" class="item-img">
+                            <div class="item-header"> <img src="./assets/QA Tester.png" alt="Qa-tester"
+                                    class="item-img">
                                 <h3 class="item-job">QA Тестировщик</h3>
                             </div>
-                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечён созданием
-                                интересных, интуитивных и визуально привлекательных цифровых продуктов. Владею
-                                принципами пользовательского дизайна, созданием wireframe, прототипированием и
+                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечен созданием
+                                интересных, интуитивно понятных и визуально привлекательных цифровых решений. Владею
+                                принципами человеко-ориентированного дизайна, вайрфреймами, прототипированием и
                                 интерактивным дизайном.</p>
                             <p class="foiz-txt">90%</p>
                             <div class="foiz">
@@ -158,15 +181,15 @@
                             </div>
                         </div>
                     </li>
-                    <li class="services-item" data-aos="fade-up" data-aos-duration="1150">
+                    <li class="services-item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="1150">
                         <div class="item-title">
-                            <div class="item-header"><img src="./assets/problem solving.png" alt="problem"
-                                    class="item-img">
+                            <div class="item-header"><img src="./assets/problem solving.png" alt="" class="item-img">
                                 <h3 class="item-job">Решение проблем</h3>
                             </div>
-                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечён созданием
-                                интересных, интуитивных и визуально привлекательных цифровых продуктов. Владею
-                                принципами пользовательского дизайна, созданием wireframe, прототипированием и
+                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечен созданием
+                                интересных, интуитивно понятных и визуально привлекательных цифровых решений. Владею
+                                принципами человеко-ориентированного дизайна, вайрфреймами, прототипированием и
                                 интерактивным дизайном.</p>
                             <p class="foiz-txt">89%</p>
                             <div class="foiz">
@@ -174,15 +197,16 @@
                             </div>
                         </div>
                     </li>
-                    <li class="services-item" data-aos="fade-up" data-aos-duration="1350">
+                    <li class="services-item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="1350">
                         <div class="item-title">
-                            <div class="item-header"><img src="./assets/frontend developer.png" alt="frontend"
-                                    class="item-img">
-                                <h3 class="item-job">Frontend Разработчик</h3>
+                            <div class="item-header"> <img src="./assets/frontend developer.png"
+                                    alt="frontend-developer" class="item-img">
+                                <h3 class="item-job">Фронтенд Разработчик</h3>
                             </div>
-                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечён созданием
-                                интересных, интуитивных и визуально привлекательных цифровых продуктов. Владею
-                                принципами пользовательского дизайна, созданием wireframe, прототипированием и
+                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечен созданием
+                                интересных, интуитивно понятных и визуально привлекательных цифровых решений. Владею
+                                принципами человеко-ориентированного дизайна, вайрфреймами, прототипированием и
                                 интерактивным дизайном.</p>
                             <p class="foiz-txt">94%</p>
                             <div class="foiz">
@@ -190,18 +214,20 @@
                             </div>
                         </div>
                     </li>
-                    <li class="services-item" data-aos="fade-up" data-aos-duration="1400">
+                    <li class="services-item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="1400">
                         <div class="item-title">
-                            <div class="item-header"><img src="./assets/backend.png" alt="backend" class="item-img">
-                                <h3 class="item-job">Backend Разработчик</h3>
+                            <div class="item-header"><img src="./assets/backend.png" alt="backend-developer"
+                                    class="item-img">
+                                <h3 class="item-job">Бэкенд Разработчик</h3>
                             </div>
-                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечён созданием
-                                интересных, интуитивных и визуально привлекательных цифровых продуктов. Владею
-                                принципами пользовательского дизайна, созданием wireframe, прототипированием и
+                            <p class="item_pharaghaf">Креативный и внимательный UI/UX дизайнер. Увлечен созданием
+                                интересных, интуитивно понятных и визуально привлекательных цифровых решений. Владею
+                                принципами человеко-ориентированного дизайна, вайрфреймами, прототипированием и
                                 интерактивным дизайном.</p>
                             <p class="foiz-txt">91%</p>
                             <div class="foiz">
-                                <div class="ichidagi-bg-back"></div>
+                                <div class="ichidagi-bg-back"> </div>
                             </div>
                         </div>
                     </li>
@@ -212,168 +238,239 @@
 
     <section class="projects" id="projects">
         <div class="container">
+
             <h2 class="projects-title">Мои проекты</h2>
+
             <div class="projects-wrapper">
-                <a data-aos="fade-right" data-aos-duration="900" href="https://clearsky-sayti.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/cleasky.jpg" alt="Clearsky">
+
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="900"
+                    href="https://clearsky-sayti.netlify.app/" class="project-card">
+                    <img src="./assets/cleasky.jpg" alt="Project">
                     <div class="project-info">
                         <h3>Clearsky</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-                <a data-aos="fade-up" data-aos-duration="1100" href="https://trafalgar67.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/trafalgar-photo.jpg" alt="Trafalgar">
+
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1100"
+                    href="https://trafalgar67.netlify.app/" class="project-card">
+                    <img src="./assets/trafalgar-photo.jpg" alt="Project">
                     <div class="project-info">
                         <h3>Trafalgar</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-                <a data-aos="fade-left" data-aos-duration="900" href="https://movie-cha.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/movie-photo.jpg" alt="Movie">
+
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="900"
+                    href="https://movie-cha.netlify.app/" class="project-card">
+                    <img src="./assets/movie-photo.jpg" alt="Project">
                     <div class="project-info">
                         <h3>Movie</h3>
                         <p>HTML • CSS • JavaScript</p>
                     </div>
                 </a>
-                <a data-aos="fade-right" data-aos-duration="1300" href="https://emoji-sayti.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/emoji-rasm.png" alt="Emoji">
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1300"
+                    href="https://emoji-sayti.netlify.app/" class="project-card">
+                    <img src="./assets/emoji-rasm.png" alt="Project">
                     <div class="project-info">
                         <h3>Emoji</h3>
                         <p>HTML • CSS • JavaScript</p>
                     </div>
                 </a>
-                <a data-aos="fade-up" data-aos-duration="1400" href="https://timer-sekundomer.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/sekundomer&timer.png" alt="Timer">
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1400"
+                    href="https://timer-sekundomer.netlify.app/" class="project-card">
+                    <img src="./assets/sekundomer&timer.png" alt="Project">
                     <div class="project-info">
                         <h3>Секундомер и Таймер</h3>
                         <p>HTML • CSS • JavaScript</p>
                     </div>
                 </a>
-                <a data-aos="fade-left" data-aos-duration="1300" href="https://playstation-sayti.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/playstation.png" alt="Playstation">
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1300"
+                    href="https://playstation-sayti.netlify.app/" class="project-card">
+                    <img src="./assets/playstation.png" alt="Project">
                     <div class="project-info">
                         <h3>Playstation</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-                <a data-aos="fade-right" data-aos-duration="1300" href="https://insta-look.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/insta-like.png" alt="Instagram">
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1300"
+                    href="https://insta-look.netlify.app/" class="project-card">
+                    <img src="./assets/insta-like.png" alt="Project">
                     <div class="project-info">
                         <h3>Instagram</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
-                <a data-aos="fade-up" data-aos-duration="1300" href="https://insta-look.netlify.app/"
-                    class="project-card">
-                    <img src="./assets/parrot-photo.png" alt="Parrot">
+                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1300"
+                    href="https://insta-look.netlify.app/" class="project-card">
+                    <img src="./assets/parrot-photo.png" alt="Project">
                     <div class="project-info">
                         <h3>Parrot</h3>
                         <p>HTML • CSS</p>
                     </div>
                 </a>
+
+
             </div>
+
         </div>
     </section>
 
     <section class="classmates" id="classmates">
         <div class="container">
+
             <div class="main-banner">
-                <img data-aos="zoom-in-down" data-aos-duration="1000" src="./assets/sinfdoshlarim.JPG" alt="Classmates">
+                <img data-aos="zoom-in-down" data-aos-duration="1000" src="./assets/sinfdoshlarim.JPG">
                 <h2>Мои одноклассники</h2>
             </div>
+
             <h4 class="frinteds-title">Мои друзья</h4>
+
             <div class="friends-slider">
                 <div class="friends-track">
-                    <div class="friend-card"><img src="./assets/jaloliddin-photo.JPG">
-                        <h3>Жалолиддин</h3><a target="_blank" href="https://t.me/True_or_Fals_e"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Портфолио</a>
+
+                    <!-- ORIGINAL -->
+                    <div class="friend-card">
+                        <img src="./assets/jaloliddin-photo.JPG">
+                        <h3>Жалолиддин</h3>
+                        <a target="_blank" href="https://t.me/True_or_Fals_e"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/umid-photo.JPG">
-                        <h3>Умид</h3><a target="_blank" href="https://t.me/UmidjonSadullayev"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a
-                            href="https://portfolio-umidjon.netlify.app/">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/umid-photo.JPG">
+                        <h3>Умид</h3>
+                        <a target="_blank" href="https://t.me/UmidjonSadullayev"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a href="https://portfolio-umidjon.netlify.app/">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/bobur-photo.JPG">
-                        <h3>Бобур</h3><a target="_blank" href="https://t.me/Muhammabobur69"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
-                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
-                            href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/bobur-photo.JPG">
+                        <h3>Бобур</h3>
+                        <a target="_blank" href="https://t.me/Muhammabobur69"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a target="_blank" href="https://www.instagram.com/"><i
+                                class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/yusufbek-poto.png">
-                        <h3>Юсуфбек</h3><a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
-                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
-                            href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/yusufbek-poto.png">
+                        <h3>Юсуфбек</h3>
+                        <a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a target="_blank" href="https://www.instagram.com/"><i
+                                class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/nurmuhammad-photo.JPG">
-                        <h3>Нурмухаммад</h3><a target="_blank" href="https://t.me/GOAT_FV8"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
-                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
-                            href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/nurmuhammad-photo.JPG">
+                        <h3>Нурмухаммад</h3>
+                        <a target="_blank" href="https://t.me/GOAT_FV8"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a target="_blank" href="https://www.instagram.com/"><i
+                                class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/akbarjo.JPG">
-                        <h3>Акбаржон</h3><a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/akbarjo.JPG">
+                        <h3>Акбаржон</h3>
+                        <a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <!-- дубликаты для бесконечной прокрутки -->
-                    <div class="friend-card"><img src="./assets/jaloliddin-photo.JPG">
-                        <h3>Жалолиддин</h3><a target="_blank" href="https://t.me/True_or_Fals_e"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Портфолио</a>
+
+                    <!-- DUPLICATE (ВАЖНО!!!) -->
+                    <div class="friend-card">
+                        <img src="./assets/jaloliddin-photo.JPG">
+                        <h3>Жалолиддин</h3>
+                        <a target="_blank" href="https://t.me/True_or_Fals_e"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/umid-photo.JPG">
-                        <h3>Умид</h3><a target="_blank" href="https://t.me/UmidjonSadullayev"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a
-                            href="https://portfolio-umidjon.netlify.app/">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/umid-photo.JPG">
+                        <h3>Умид</h3>
+                        <a target="_blank" href="https://t.me/UmidjonSadullayev"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a href="https://portfolio-umidjon.netlify.app/">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/bobur-photo.JPG">
-                        <h3>Бобур</h3><a target="_blank" href="https://t.me/Muhammabobur69"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
-                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
-                            href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/bobur-photo.JPG">
+                        <h3>Бобур</h3>
+                        <a target="_blank" href="https://t.me/Muhammabobur69"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a target="_blank" href="https://www.instagram.com/"><i
+                                class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/yusufbek-poto.png">
-                        <h3>Юсуфбек</h3><a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
-                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
-                            href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/yusufbek-poto.png">
+                        <h3>Юсуфбек</h3>
+                        <a target="_blank" href="https://t.me/Isrofilov_Yusufbek"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a target="_blank" href="https://www.instagram.com/"><i
+                                class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/nurmuhammad-photo.JPG">
-                        <h3>Нурмухаммад</h3><a target="_blank" href="https://t.me/GOAT_FV8"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a target="_blank"
-                            href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a><a
-                            href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/nurmuhammad-photo.JPG">
+                        <h3>Нурмухаммад</h3>
+                        <a target="_blank" href="https://t.me/GOAT_FV8"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a target="_blank" href="https://www.instagram.com/"><i
+                                class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="#">Портфолио</a>
                     </div>
-                    <div class="friend-card"><img src="./assets/akbarjo.JPG">
-                        <h3>Акбаржон</h3><a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
-                                class="fa-brands fa-telegram"></i>Telegram</a><a href="#">Портфолио</a>
+
+                    <div class="friend-card">
+                        <img src="./assets/akbarjo.JPG">
+                        <h3>Акбаржон</h3>
+                        <a target="_blank" href="https://akbarjon-partfoliyo.netlify.app/"><i
+                                class="fa-brands fa-telegram"></i>Telegram</a>
+                        <a href="#">Портфолио</a>
                     </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 
     <section class="family" id="family">
         <div class="container">
-            <h2>Партнёрские организации</h2>
+            <h2>Партнерские организации</h2>
             <div class="family-wrapper">
-                <div class="family_big-img"><img src="./assets/hamkorlar big rasm.jpg" alt="partners"></div>
-                <div class="cards">
-                    <div class="family-card"><img src="./assets/Valuation.png">
-                        <h3>VALUATION ООО</h3>
-                        <p>VALUATION - оценочная компания, занимается оценкой всех видов имущества с 2015 года.</p>
-                    </div>
-                    <div class="family-card"><img src="./assets/logistika-photo.jpg">
-                        <h3>Rasulbek group</h3>
-                        <p>Логистическая компания с 2015 года занимается международной логистической деятельностью.</p>
-                    </div>
+                <!-- Крупное изображение -->
+                <div class="family_big-img">
+                    <img src="./assets/hamkorlar big rasm.jpg" alt="партнеры_большое_фото">
                 </div>
+                <!-- Карточки -->
+                <div class="cards">
+
+                    <div class="family-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./assets/Valuation.png">
+                        <h3>VALUATION ООО</h3>
+                        <p>VALUATION - оценочная компания, занимающаяся оценкой всех видов имущества. С 2015 года.</p>
+                    </div>
+
+                    <div class="family-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./assets/logistika-photo.jpg">
+                        <h3>Rasulbek group</h3>
+                        <p>Логистическая компания, занимающаяся международной логистикой с 2015 года.</p>
+                    </div>
+
+
+                </div>
+
             </div>
         </div>
     </section>
@@ -381,22 +478,30 @@
     <section class="teachers" id="teachers">
         <div class="container">
             <h2>Мои учителя</h2>
+
             <div class="teachers-wrapper">
-                <div class="teacher-card"><img src="./assets/Matematika-ustz.png" alt="Math">
-                    <h3>Учитель Хамрокул</h3>
-                    <p>Обучал математике.</p>
+                <div class="teacher-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/Matematika-ustz.png" alt="Учитель-математики">
+                    <h3>Учитель Хамрокул.</h3>
+                    <p>Учил меня математике.</p>
                 </div>
-                <div class="teacher-card"><img src="./assets/shahlo-ustoz.png" alt="English">
-                    <h3>Учитель Шахло</h3>
-                    <p>Развивал мой английский язык.</p>
+
+                <div class="teacher-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/shahlo-ustoz.png" alt="Учитель-английского">
+                    <h3>Учитель Шахло.</h3>
+                    <p>Развивала мой английский язык.</p>
                 </div>
-                <div class="teacher-card"><img src="./assets/habibuloh-ustoz.png" alt="IT">
-                    <h3>Мой учитель, мой свет</h3>
-                    <p>Обучил фронтенд-программированию.</p>
+
+                <div class="teacher-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/habibuloh-ustoz.png" alt="Мой-учитель-свет">
+                    <h3>Мой учитель, свет.</h3>
+                    <p>Учил меня фронтенд разработке.</p>
                 </div>
-                <div class="teacher-card"><img src="./assets/Zarnigor ustoz.png" alt="Tutor">
-                    <h3>Учитель Зарнигор</h3>
-                    <p>Наш очень добрый тьютор.</p>
+
+                <div class="teacher-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/Zarnigor ustoz.png" alt="Мой-учитель-свет">
+                    <h3>Учитель Зарнигор.</h3>
+                    <p>Наш тьютор, очень добрая.</p>
                 </div>
             </div>
         </div>
@@ -404,61 +509,100 @@
 
     <section class="memories">
         <div class="container">
+
             <h2 class="section-title">Воспоминания</h2>
+
             <div class="memories-wrapper">
-                <div class="memory-card"><img src="./assets/fugtbol-time.png">
+
+                <div class="memory-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/fugtbol-time.png">
                     <div class="memory-content">
                         <h3>Футбол</h3>
-                        <p>На этом фото мы выиграли у 7-"А" класса.</p>
+                        <p>На этом фото мы выиграли у 7 "А" класса.</p>
                     </div>
                 </div>
-                <div class="memory-card"><img src="./assets/ozbekiston-bog'i.png">
+
+                <div class="memory-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/ozbekiston-bog'i.png">
                     <div class="memory-content">
-                        <h3>С классом</h3>
-                        <p>На этом фото мы с классом ездили в парк Узбекистана.</p>
+                        <h3>С нашим классом</h3>
+                        <p>На этом фото мы ходили с классом в парк "Узбекистан".</p>
                     </div>
                 </div>
-                <div class="memory-card"><img src="./assets/zakovat-rasm1.png">
+
+                <div class="memory-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/zakovat-rasm1.png">
                     <div class="memory-content">
-                        <h3>Закават</h3>
-                        <p>На этом фото мы участвовали в Закавате.</p>
+                        <h3>Заковот</h3>
+                        <p>На этом фото мы участвовали в игре "Заковот".</p>
                     </div>
                 </div>
-                <div class="memory-card"><img src="./assets/codying-rush_rasm1.JPG">
+
+                <div class="memory-card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./assets/codying-rush_rasm1.JPG">
                     <div class="memory-content">
                         <h3>Coding Rush</h3>
-                        <p>На этом фото мы заняли 1 место.</p>
+                        <p>На этом фото мы заняли 1-е место.</p>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal" id="modal">
+        <span class="modal-close" id="closeBtn">&times;</span>
+        <img class="modal-img" id="modalImg">
+    </div>
+
+
     <section class="contact">
         <div class="container">
+
             <form class="contact-form">
-                <h2>Свяжитесь <span>со мной!</span></h2>
+
+                <h2>Связаться <span>со мной!</span></h2>
+
                 <div class="input-box">
-                    <input type="text" class="input name" placeholder="Ваше имя">
-                    <input type="text" class="input surname" placeholder="Ваша фамилия">
+                    <input type="text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="input name"
+                        placeholder="Ваше имя">
+                    <input type="text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="input surname"
+                        placeholder="Ваша фамилия">
                 </div>
+
                 <div class="input-box">
-                    <input type="text" class="input phone" placeholder="Номер телефона">
-                    <input type="text" class="input email" placeholder="Email адрес">
+                    <input type="text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="input phone"
+                        placeholder="Номер телефона">
+                    <input type="text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="input email"
+                        placeholder="Email адрес">
                 </div>
-                <textarea class="input message" placeholder="Напишите ваше сообщение..."></textarea>
+
+                <textarea class="input message" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                    placeholder="Напишите ваше сообщение..."></textarea>
+
                 <button type="submit">Отправить сообщение</button>
+
             </form>
+
         </div>
     </section>
 
     <footer class="fotter">
         <div class="container">
-            <div class="fotter-wrapper">
-                <p class="fotter-txt">Разработано Абдиёзовым Шахзодбеком #2026</p>
+            <div class="fotter-wrapper" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <p class="fotter-txt">Подготовлено Абдиёзовым Шахзодбеком #2026</p>
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
