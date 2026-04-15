@@ -1208,3 +1208,214 @@ textarea.input {
         left: 10px;
     }
 }
+
+
+/* ================= HEADER (TUZATILGAN) ================= */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #081b29;
+    padding: 15px 0;
+    z-index: 100;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* MUHIM: wrap bo'lmasin */
+    gap: 20px;
+}
+
+.logo {
+    color: #0ef;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    /* logoni bir qator saqlaydi */
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px #0ef;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0ef;
+    transition: .3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* HEADER RIGHT SIDE (TIL + MODE) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+#langSelect {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #00bcd4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#langSelect:hover {
+    background: #0097a7;
+}
+
+#mode {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#mode:hover {
+    background: rgba(0, 238, 255, 0.2);
+}
+
+/* ================= LIGHT MODE HEADER ================= */
+.light .header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.light .navbar a {
+    color: #111;
+}
+
+.light .navbar a:hover {
+    color: #0077ff;
+}
+
+.light .navbar a::after {
+    background: #0077ff;
+}
+
+.light .logo {
+    color: #0077ff;
+}
+
+.light #mode {
+    color: #0077ff;
+}
+
+.light #mode:hover {
+    background: rgba(0, 119, 255, 0.1);
+}
+
+/* ================= RESPONSIVE HEADER ================= */
+@media (max-width: 1024px) {
+    .navbar a {
+        margin-left: 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header-right {
+        order: 2;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .header-wrapper {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin: 5px 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+
+    }
+
+    /* Agar hamburger menu qo'shmoqchi bo'lsangiz: */
+    /*
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #081b29;
+        padding: 20px;
+    }
+    */
+}

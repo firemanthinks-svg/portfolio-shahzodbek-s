@@ -20,6 +20,7 @@
         <div class="container">
             <div class="header-wrapper">
                 <a class="logo" href="#">&lt;Shahzodbek /&gt;</a>
+
                 <nav class="navbar">
                     <a href="#home">Bosh sahifa</a>
                     <a href="#about">Men haqimda</a>
@@ -30,14 +31,17 @@
                     <a href="#teachers">Ustozlarim</a>
                     <a href="#memories">Xotiralar</a>
                 </nav>
-                <select id="langSelect" onchange="changeLang(this.value)">
-                    <option value="">Select language</option>
 
-                    <option value="uz">🇺🇿 O'zbek</option>
-                    <option value="ru">🇷🇺 Русский</option>
-                    <option value="en">🇺🇸 English</option>
-                </select>
-                <button id="mode"><i class="fa-solid fa-sun"></i></button>
+                <!-- Yangi: header-right div -->
+                <div class="header-right">
+                    <select id="langSelect" onchange="changeLang(this.value)">
+                        <option value="">Select language</option>
+                        <option value="uz">🇺🇿 O'zbek</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="en">🇺🇸 English</option>
+                    </select>
+                    <button id="mode"><i class="fa-solid fa-sun"></i></button>
+                </div>
             </div>
         </div>
     </header>
@@ -502,7 +506,7 @@
         </div>
     </section>
 
-    <section class="memories">
+    <section class="memories" id="memories">
         <div class="container">
 
             <h2 class="section-title">Xotiralar</h2>
@@ -586,8 +590,9 @@
 
     <footer class="fotter">
         <div class="container">
-            <div class="fotter-wrapper" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                <p class="fotter-txt">Abdiyozov Shahzodbek tomonidan tayyorlandi #2026</p>
+            <div class="fotter-wrapper">
+                <p data-aos-duration="1300" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                    class="fotter-txt">Abdiyozov Shahzodbek tomonidan tayyorlandi #2026</p>
             </div>
         </div>
     </footer>
