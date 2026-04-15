@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 📩 Yangi ariza!
 
 👤 Ismi: ${name.value}
-👤 Familiyasi: ${surname.value}
+🗣️ Familiyasi: ${surname.value}
 
 📞 Telefon: ${phone.value}
 📧 Email: ${email.value}
