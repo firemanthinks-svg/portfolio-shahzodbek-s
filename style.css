@@ -40,6 +40,39 @@ section {
     gap: 15px;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #081b29;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
 .logo {
     color: #0ef;
     font-size: 18px;
