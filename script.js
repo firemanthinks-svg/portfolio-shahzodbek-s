@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (valid) {
             const token = "8661152703:AAG8SbU6ELXkDa93nFmDiEeFIDmJCMuVn2E";
-            const chat_id = "5972469200";
+            const chat_id = "1272696340";
 
             const text = `
 📩 Yangi ariza!
