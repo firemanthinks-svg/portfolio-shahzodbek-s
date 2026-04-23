@@ -52,6 +52,9 @@ function changeLang(lang) {
     else if (lang === "en") window.location.href = "./english.html";
 }
 
+
+
+
 // CONTACT FORM (YANGILANGAN)
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".contact-form");
@@ -159,4 +162,19 @@ const navbar = document.querySelector(".navbar");
 
 hamburger.addEventListener("click", () => {
     navbar.classList.toggle("active");
-}); 
+});
+
+
+
+// Header
+
+
+
+hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+    document.querySelector(".header")
+        .classList.toggle("scrolled", window.scrollY > 50);
+});
