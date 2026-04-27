@@ -123,11 +123,13 @@ ${message.value}
 
 
 // element 
-
-const images = document.querySelectorAll(".memory-card img");
+// MODAL ELEMENTLAR
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
 const closeBtn = document.getElementById("closeBtn");
+
+// HAMMA RASMLARNI OLISH (teacher + memory + boshqa ham)
+const images = document.querySelectorAll("img");
 
 // OPEN
 images.forEach(img => {
@@ -137,19 +139,19 @@ images.forEach(img => {
     });
 });
 
-// CLOSE X
+// CLOSE (X)
 closeBtn.addEventListener("click", () => {
     modal.classList.remove("active");
 });
 
-// ESC
+// ESC bosilganda yopish
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         modal.classList.remove("active");
     }
 });
 
-// CLICK OUTSIDE
+// outside bosilsa yopish
 modal.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.classList.remove("active");
@@ -162,19 +164,13 @@ const navbar = document.querySelector(".navbar");
 
 hamburger.addEventListener("click", () => {
     navbar.classList.toggle("active");
+    hamburger.classList.toggle("active");
 });
 
-
-
-// Header
-
-
-
-hamburger.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-});
-
-window.addEventListener("scroll", () => {
-    document.querySelector(".header")
-        .classList.toggle("scrolled", window.scrollY > 50);
+// link bosilganda menu yopilsin (mobil uchun juda muhim)
+document.querySelectorAll(".navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        hamburger.classList.remove("active");
+    });
 });
